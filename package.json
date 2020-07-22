@@ -1,0 +1,32 @@
+{
+  "name": "tfcdk-awscdk",
+  "version": "1.0.0",
+  "main": "main.js",
+  "types": "main.ts",
+  "license": "MPL-2.0",
+  "private": true,
+  "scripts": {
+    "get": "cdktf get",
+    "build": "yarn get && tsc",
+    "synth": "cdktf synth",
+    "compile": "tsc --pretty",
+    "watch": "tsc -w",
+    "test": "echo ok",
+    "upgrade": "npm i cdktf@latest cdktf-cli@latest",
+    "upgrade:next": "npm i cdktf@next cdktf-cli@next"
+  },
+  "engines": {
+    "node": ">=10.12"
+  },
+  "dependencies": {
+    "cdktf": "0.0.12",
+    "change-case": "^4.1.1",
+    "constructs": "^3.0.4",
+    "monocdk-experiment": "^1.53.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.24",
+    "cdktf-cli": "0.0.12",
+    "typescript": "^3.9.7"
+  }
+}
