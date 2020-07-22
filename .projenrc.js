@@ -9,4 +9,7 @@ const project = new TypeScriptProject({
   }
 });
 
+// also build on push
+project.buildWorkflow?.on({ push: {} });
+
 project.synth();
