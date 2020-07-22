@@ -1,4 +1,4 @@
-import { Mapping, findMapping } from './map';
+import { Mapping, findMapping, AnyMapping } from './map';
 import * as merge from 'deepmerge';
 
 // eslint-disable-next-line @typescript-eslint/no-require-imports
@@ -21,7 +21,7 @@ export class TerraformMapper {
    */
   public readonly terraformResourceType: string;
 
-  private readonly mapping: Mapping<any, any>;
+  private readonly mapping: Mapping<AnyMapping>;
 
   constructor(cfnResourceType: string) {
     const mapping = findMapping(cfnResourceType);
